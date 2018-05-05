@@ -1,18 +1,25 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <HelloWorld/>
-  </div>
+  <main>
+    <v-app>
+      <v-content>
+        <guest-navigation/>
+        <v-container class="mt-3 mb-3">
+         <router-view/>
+        </v-container>
+        <app-footer/>
+      </v-content>
+    </v-app>
+  </main>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld'
-
+import AppFooter from "@/components/Footer";
+import GuestNavigation from "@/navegations/guest";
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
+  components:{
+    AppFooter,GuestNavigation
+  },
+  name: 'App'
 }
 </script>
 

@@ -1,5 +1,8 @@
 import Vue from 'vue';
 import Vuex from 'Vuex';
+
+import  authModule from '@/modules/auth'
+import productsModule from '@/modules/produts'
 Vue.use(Vuex);
 export default new Vuex.Store({
     state:{
@@ -24,10 +27,12 @@ export default new Vuex.Store({
                 state.alert.show=false;
                 state.alert.message='';
             }, data.timeout);
-        },
-        modules:{
-
         }
+        
+    },
+    modules: {
+        authModule,productsModule
+
     }
     
 });
